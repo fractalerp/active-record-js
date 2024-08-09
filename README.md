@@ -14,7 +14,7 @@
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Ffractalhr%2Factive-record-js.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Ffractalhr%2Factive-record-js?ref=badge_shield)
 [![Apache License, Version 2.0](https://img.shields.io/badge/mit-blue.svg)](http://opensource.org/licenses/mit)
 
-[![npm](https://nodei.co/npm/active-record-js.png)](https://www.npmjs.com/package/active-record-js)
+[![npm](https://nodei.co/npm/active_record_js.png)](https://www.npmjs.com/package/active_record_js)
 
 # ACTIVE RECORD JS
 A library responsible for representing business data. 
