@@ -1,5 +1,5 @@
 {
-  "name": "active_record_js",
+  "name": "@fractalerp/active-record-js",
   "appName": "Active Record Js",
   "cleintVersion": "1.0.0",
   "serverVersion": "1.0.0",
