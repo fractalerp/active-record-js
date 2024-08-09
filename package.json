@@ -1,9 +1,7 @@
 {
   "name": "@fractalerp/active-record-js",
   "appName": "Active Record Js",
-  "cleintVersion": "1.0.0",
-  "serverVersion": "1.0.0",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Responsible for representing business data",
   "author": "Acellam Guy <acellam.guy@gmail.com>",
   "keywords": [
