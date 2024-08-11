@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "declaration": false,
+    "declaration": true,
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
     "module": "amd",
@@ -11,14 +11,14 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noLib": false,
-    "outDir": "dist/tsc/",
+    "outDir": "dist/",
     "removeComments": true,
     "rootDir": "./",
     "sourceMap": true,
     "strict": true,
     "strictFunctionTypes": false,
     "skipLibCheck": true,
-    "target": "es5",
+    "target": "es2017",
     // "watch": false
   },
   "exclude": [

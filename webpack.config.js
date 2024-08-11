@@ -4,10 +4,10 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const nodeExternals = require("webpack-node-externals");
 
 module.exports = {
-    entry: "./index.ts",
+    entry: "./active_record.ts",
     output: {
         path: path.resolve(__dirname, "dist"),
-        filename: "index.js"
+        filename: "active_record.js"
     },
     resolve: {
         extensions: [".ts", ".js"]

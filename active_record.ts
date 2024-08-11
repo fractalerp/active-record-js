@@ -2,7 +2,7 @@ import { ActiveRecordInterface } from "./active_record_interface";
 import { DatabaseType } from "./@types/database_type";
 import { NoSqlActiveRecord } from "./nosql/nosql_active_record";
 import { RelationalActiveRecord } from "./relational/relational_active_record";
-import { Messages } from "./utils/messages";
+import { Messages } from "./lib/messages";
 import { SchemaProperty } from "./@types/schema_property";
 import { ActiveRecordError } from "./lib/active_record_error";
 

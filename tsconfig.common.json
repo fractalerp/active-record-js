@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "declaration": false,
+    "declaration": true,
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
     "module": "commonjs",

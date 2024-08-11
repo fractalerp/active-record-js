@@ -1,7 +1,7 @@
 {
   "name": "@fractalerp/active-record-js",
   "appName": "Active Record Js",
-  "version": "1.0.2",
+  "version": "1.0.12",
   "description": "Responsible for representing business data",
   "author": "Acellam Guy <acellam.guy@gmail.com>",
   "keywords": [
@@ -24,10 +24,15 @@
     "node": "16.8.0",
     "npm": "^7.21.0"
   },
+  "main": "./dist/active_record.js",
+  "types": "./dist/active_record.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "start": "npm run dev:app",
     "watch": "nodemon --watch webpack.config.js --watch Gruntfile.js --exec grunt",
-    "dev:app": "nodemon ./dist/activerecord.js",
+    "dev:app": "nodemon ./dist/main.js",
     "emit": "tsc",
     "pretest": "npm run lint && npm run build:test && tsc",
     "test": "DATABASE_URI='mysql://' TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' mocha --config .mocharc.json",
@@ -37,7 +42,8 @@
     "lint": "eslint -c .eslintrc.js '**/*.ts'",
     "lint:fix": "npm run lint -- --fix",
     "build:development": "grunt development",
-    "build:release": "grunt release",
+    "build": "grunt release",
+    "build:release": "npm run build",
     "build:test": "grunt test"
   },
   "pre-commit": [
