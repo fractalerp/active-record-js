@@ -1,7 +1,7 @@
 {
   "name": "@fractalerp/active-record-js",
   "appName": "Active Record Js",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "Responsible for representing business data",
   "author": "Acellam Guy <acellam.guy@gmail.com>",
   "keywords": [
