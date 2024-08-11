@@ -24,8 +24,8 @@
     "node": "16.8.0",
     "npm": "^7.21.0"
   },
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "./dist/active_record.js",
+  "types": "./dist/active_record.d.ts",
   "files": [
     "dist"
   ],

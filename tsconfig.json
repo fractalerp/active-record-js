@@ -4,7 +4,7 @@
     "declaration": true,
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
-    "module": "amd",
+    "module": "commonjs",
     "moduleResolution": "node",
     "noEmitOnError": true,
     "noFallthroughCasesInSwitch": true,
