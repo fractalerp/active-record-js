@@ -7,7 +7,7 @@ module.exports = {
     entry: "./active_record.ts",
     output: {
         path: path.resolve(__dirname, "dist"),
-        filename: "active_record.js"
+        filename: "index.js"
     },
     resolve: {
         extensions: [".ts", ".js"]

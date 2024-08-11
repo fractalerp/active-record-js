@@ -1,9 +1,9 @@
 import { ActiveRecordInterface } from "./active_record_interface";
-import { DatabaseType } from "./@types/database_type";
+import { DatabaseType } from "./database/database_type";
 import { NoSqlActiveRecord } from "./nosql/nosql_active_record";
 import { RelationalActiveRecord } from "./relational/relational_active_record";
 import { Messages } from "./lib/messages";
-import { SchemaProperty } from "./@types/schema_property";
+import { SchemaProperty } from "./lib/schema_property";
 import { ActiveRecordError } from "./lib/active_record_error";
 
 export class ActiveRecord<T> implements ActiveRecordInterface<T> {
@@ -13,7 +13,9 @@ export class ActiveRecord<T> implements ActiveRecordInterface<T> {
   // TODO read database type from memory
   private databaseType = DatabaseType.NOSQL;
 
-  constructor(modelName: string, schema: Record<string, SchemaProperty>) {
+  constructor(modelName: string, schema: Record<string, SchemaProperty>, databaseType = DatabaseType.NOSQL) {
+    this.databaseType = databaseType;
+
     if (this.databaseType === DatabaseType.NOSQL) {
       this.nosqlActiveRecord = new NoSqlActiveRecord<T>(modelName, schema);
     } else {
@@ -31,7 +33,7 @@ export class ActiveRecord<T> implements ActiveRecordInterface<T> {
 
   async findOne(query: any): Promise<T | null> {
     if (this.databaseType === DatabaseType.NOSQL) {
-      return this.nosqlActiveRecord.findOne(query);
+      return await this.nosqlActiveRecord.findOne(query);
     }
 
     return this.relationalActiveRecord.findOne(query);
@@ -39,7 +41,7 @@ export class ActiveRecord<T> implements ActiveRecordInterface<T> {
 
   async create(data: T): Promise<T> {
     if (this.databaseType === DatabaseType.NOSQL) {
-      return this.nosqlActiveRecord.create(data);
+      return await this.nosqlActiveRecord.create(data);
     }
 
     return this.relationalActiveRecord.create(data);
@@ -47,7 +49,7 @@ export class ActiveRecord<T> implements ActiveRecordInterface<T> {
 
   async update(id: string | number, data: Partial<T>): Promise<T> {
     if (this.databaseType === DatabaseType.NOSQL) {
-      return this.nosqlActiveRecord.update(id, data);
+      return await this.nosqlActiveRecord.update(id, data);
     }
 
     return this.relationalActiveRecord.update(id, data);
@@ -55,7 +57,7 @@ export class ActiveRecord<T> implements ActiveRecordInterface<T> {
 
   async delete(id: string | number): Promise<void> {
     if (this.databaseType === DatabaseType.NOSQL) {
-      return this.nosqlActiveRecord.delete(id);
+      return await this.nosqlActiveRecord.delete(id);
     }
 
     return this.relationalActiveRecord.delete(id);
@@ -66,7 +68,7 @@ export class ActiveRecord<T> implements ActiveRecordInterface<T> {
       throw new ActiveRecordError(Messages.RELATIONAL_DATABASE_NOT_SUPPORTED);
     }
 
-    return this.nosqlActiveRecord.aggregate(pipeline);
+    return await this.nosqlActiveRecord.aggregate(pipeline);
   }
 
   async index(keys: string[]): Promise<void> {
@@ -74,7 +76,7 @@ export class ActiveRecord<T> implements ActiveRecordInterface<T> {
       throw new ActiveRecordError(Messages.RELATIONAL_DATABASE_NOT_SUPPORTED);
     }
 
-    return this.nosqlActiveRecord.index(keys);
+    return await this.nosqlActiveRecord.index(keys);
   }
 
   async query(sql: string, params?: any[]): Promise<any> {

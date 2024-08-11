@@ -1,4 +1,4 @@
-import { SchemaProperty } from "../../@types/schema_property";
+import { SchemaProperty } from "../../lib/schema_property";
 
 export interface IUserTable {
   type?: string;

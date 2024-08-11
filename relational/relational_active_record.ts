@@ -1,6 +1,6 @@
 import { Sequelize, Model, QueryTypes } from "sequelize";
 
-import { SchemaProperty } from "../@types/schema_property";
+import { SchemaProperty } from "../lib/schema_property";
 import { RelationalActiveRecordInterface } from "./relational_active_record_interface";
 
 export class RelationalActiveRecord<T> implements RelationalActiveRecordInterface<T> {
@@ -9,7 +9,7 @@ export class RelationalActiveRecord<T> implements RelationalActiveRecordInterfac
 
   constructor(modelName: string, schema: Record<string, SchemaProperty>) {
     // TODO get global sequilize instance from memory
-    this.sequelize = new Sequelize(`${process.env.DATABASE_URI}`);
+    this.sequelize = new Sequelize(`${process.env.RDBMS_DATABASE_URI}`);
     // @ts-ignore
     this.model = this.sequelize.define(modelName, schema);
   }

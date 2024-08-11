@@ -1,6 +1,6 @@
 import { expect } from "chai";
 import * as sinon from "sinon";
-import mongoose from "mongoose";
+import * as mongoose from "mongoose";
 import { NoSqlActiveRecord } from "../../nosql/nosql_active_record";
 import { userDocumentSchema, IUserDocument } from "../fixtures/user_document";
 import { userOneData, userTwoData } from "../fixtures/user_data";

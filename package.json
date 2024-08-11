@@ -24,8 +24,8 @@
     "node": "16.8.0",
     "npm": "^7.21.0"
   },
-  "main": "./dist/active_record.js",
-  "types": "./dist/active_record.d.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
@@ -35,11 +35,11 @@
     "dev:app": "nodemon ./dist/main.js",
     "emit": "tsc",
     "pretest": "npm run lint && npm run build:test && tsc",
-    "test": "DATABASE_URI='mysql://' TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' mocha --config .mocharc.json",
-    "test:dev": "DATABASE_URI='mysql://' TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' mocha --config .mocharc.dev.json",
-    "test:unit": "DATABASE_URI='mysql://' TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' nyc -r lcov -e .ts -x \"*.spec.ts\" mocha --config .mocharc.json -r ts-node/register activerecord/**/*.spec.ts  app/**/*.spec.ts && nyc report",
+    "test": "NODE_ENV='test' RDBMS_DATABASE_URI='mysql://' TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' mocha --config .mocharc.json",
+    "test:dev": "NODE_ENV='test' RDBMS_DATABASE_URI='mysql://' TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' mocha --config .mocharc.dev.json",
+    "test:unit": "NODE_ENV='test' RDBMS_DATABASE_URI='mysql://' TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' nyc -r lcov -e .ts -x \"*.spec.ts\" mocha --config .mocharc.json -r ts-node/register activerecord/**/*.spec.ts  app/**/*.spec.ts && nyc report",
     "upload_coverage": "nyc npm test && nyc report --reporter=text-lcov | coveralls",
-    "lint": "eslint -c .eslintrc.js '**/*.ts'",
+    "lint": "",
     "lint:fix": "npm run lint -- --fix",
     "build:development": "grunt development",
     "build": "grunt release",
