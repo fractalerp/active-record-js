@@ -10,7 +10,7 @@ import { NoSQLActiveRecordInterface } from "./nosql_active_record_interface";
 import DatabaseManagementSystem from "./../database/dms";
 
 export class NoSqlActiveRecord<T> implements NoSQLActiveRecordInterface<T> {
-  private model: Model<T>;
+  public model: Model<T>;
   private dbms: DatabaseManagementSystem = new DatabaseManagementSystem();
 
 
@@ -22,7 +22,7 @@ export class NoSqlActiveRecord<T> implements NoSQLActiveRecordInterface<T> {
     this.model =
       process.env.NODE_ENV !== "test"
         ? this.dbms.nosqlDB.database.model<T>(modelName, new Schema(mongoSchema as any))
-        : model<T>(modelName, new Schema(mongoSchema as any)) // allow for
+        : model<T>(modelName, new Schema(mongoSchema as any)) // allow for test
   }
 
   async find(query: any): Promise<T[]> {

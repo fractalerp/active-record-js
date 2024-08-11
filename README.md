@@ -96,6 +96,15 @@ const task = await TaskModel.create({
 const task = await TaskModel.findOne({ id: 'cbdabs-29232323-msasd'});
 ```
 
+5. You can also use the underlying ORM model and instance methods
+
+```typescript
+// create task
+const filter = { };
+const countTasks = await TaskModel.model.countDocuments(filter);
+
+```
+
 ## 🫶 Projects using this package
 See the projects using this package in action.
 - [Fractal Js](https://github.com/fractalerp/fractal-js)

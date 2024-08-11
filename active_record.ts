@@ -9,8 +9,6 @@ import { ActiveRecordError } from "./lib/active_record_error";
 export class ActiveRecord<T> implements ActiveRecordInterface<T> {
   private nosqlActiveRecord!: NoSqlActiveRecord<T>;
   private relationalActiveRecord!: RelationalActiveRecord<T>;
-
-  // TODO read database type from memory
   private databaseType = DatabaseType.NOSQL;
 
   constructor(modelName: string, schema: Record<string, SchemaProperty>, databaseType = DatabaseType.NOSQL) {

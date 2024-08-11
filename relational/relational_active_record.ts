@@ -5,7 +5,7 @@ import { RelationalActiveRecordInterface } from "./relational_active_record_inte
 
 export class RelationalActiveRecord<T> implements RelationalActiveRecordInterface<T> {
   private sequelize!: Sequelize;
-  private model: typeof Model;
+  public model: typeof Model;
 
   constructor(modelName: string, schema: Record<string, SchemaProperty>) {
     // TODO get global sequilize instance from memory
