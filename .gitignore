@@ -11,7 +11,7 @@ pack
 yarn.lock
 yarn-error.log
 *.DS_Store
-package-lock.json
+# package-lock.json
 assets/certs/*
 .DS_Store
 backend/public
