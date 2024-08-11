@@ -21,11 +21,87 @@ A library responsible for representing business data.
 
 This library follows the `Active Record Pattern` by building a wrapper on top of popular orm such as [Mongoose](https://www.npmjs.com/package/mongoose) and [Sequelize](https://www.npmjs.com/package/sequelize) to support all kinds of databases
 
+## ⚙️ How to use the package in project
+1. You should create the following environment variables in your node project.
+```env
+RDBMS_DATABASE_URI="mysql://DATBASE_USER:DATABASE_PASSWORD@DATABASE_HOST:DATABASE_PORT/DATABASE_DB"
+NOSQL_DATABASE_URI="mongodb://DATABASE_HOST:DATABASE_PORT/DATABASE_DB"
+NOSQL_DATABASE_ADAPTER="mongodb"
+```
+2. Once the variables have been set. You should create a model base on the active record `SchemaProperty`. See example below
+
+```typescript
+import { ActiveRecord } from "@fractalerp/active-record-js"
+
+export interface ITaskModelDocument {
+  name: string;
+  description: string;
+}
+
+const TaskModelSchema = {
+  name: {
+    type: String,
+    required: true,
+    unique: true
+  },
+  description: {
+    type: String,
+    default: null
+  }
+};
+
+export const TaskModel = new ActiveRecord<ITaskModelDocument>("Task", TaskModelSchema);
+
+```
+3. Then use its methods to perform data management. The following methods are supported;
+
+|Method|Description|
+|------------------|-----------|
+|`find`|returns list of data objects|
+|`findOne`|returns one data item|
+|`create`|save item to the data store|
+|`update`|updates the record in the store|
+|`delete`|delete item from the data store|
+
+Since we support all kinds of databases. The following are the respective methods of the two kinds of databases.
+
+This only applies to `NOSQL databases`
+
+|Method|Description|
+|------------------|-----------|
+|`aggregate`|peform aggregate action based on a pipeline|
+|`index`|create an index in the document store|
+
+This only applies to `Relational databases`
+
+|Method|Description|
+|------------------|-----------|
+|`query`|create a raw `SQL` to send to database|
+|`beginTransaction`|start a transaction|
+|`commitTransaction`|persist a transaction|
+|`rollbackTransaction`|rollback a transaction|
+
+Other than that, all the other ORM respective methods for `Sequelize` and `Mongoose` are supported by default.
+
+4. Finally you can use the model to peform data action. See example.
+
+```typescript
+// create task
+const task = await TaskModel.create({
+    name: 'Use fractalerp active record js',
+    description: 'Change all models'
+});
+
+// Find one task
+const task = await TaskModel.findOne({ id: 'cbdabs-29232323-msasd'});
+```
+
+## 🫶 Projects using this package
+See the projects using this package in action.
+- [Fractal Js](https://github.com/fractalerp/fractal-js)
+- [Fractalerp core](https://github.com/fractalerp/fractal-core)
 
 ## 🪲 Issues, suggestions and feature requests
-👩‍🚒 We are failing to get the published NPM package working. Someone can fix it and send a pull request.
-
-In the mean time, you can just include the module as part of the project and use it 🚀
 
 We are actively maintaining this boilerplate, please report any issues or suggestion for improvement at https://github.com/fractalerp/active-record-js/issues
 
