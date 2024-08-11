@@ -22,10 +22,14 @@ A library responsible for representing business data.
 This library follows the `Active Record Pattern` by building a wrapper on top of popular orm such as [Mongoose](https://www.npmjs.com/package/mongoose) and [Sequelize](https://www.npmjs.com/package/sequelize) to support all kinds of databases
 
 
-## Issues, suggestions and feature requests
+## 🪲 Issues, suggestions and feature requests
+👩‍🚒 We are failing to get the published NPM package working. Someone can fix it and send a pull request.
+
+In the mean time, you can just include the module as part of the project and use it 🚀
+
 We are actively maintaining this boilerplate, please report any issues or suggestion for improvement at https://github.com/fractalerp/active-record-js/issues
 
-## Development and contribution
+## 👩‍💻 Development and contribution
 Prerequisite: Install git, node package manager, webpack CLI, grunt CLI
 
 To contribute, fork and clone.
