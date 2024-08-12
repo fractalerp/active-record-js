@@ -29,8 +29,7 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
-      env:
-        NODE_ENV: 'test:unit'
+    - run: npm run coverage
     - name: Upload coverage reports
       uses: codecov/codecov-action@v4.2.0
       with:
