@@ -112,7 +112,7 @@ See the projects using this package in action.
 
 ## 🪲 Issues, suggestions and feature requests
 
-We are actively maintaining this boilerplate, please report any issues or suggestion for improvement at https://github.com/fractalerp/active-record-js/issues
+We are actively maintaining this library, please report any issues or suggestion for improvement at https://github.com/fractalerp/active-record-js/issues
 
 ## 👩‍💻 Development and contribution
 Prerequisite: Install git, node package manager, webpack CLI, grunt CLI
@@ -150,8 +150,8 @@ While developing, you will probably rely mostly on `npm start`; however, there a
 |`test`|Runs lint, build, unit tests with mocha and generates a coverage report|
 |`test:dev`|Runs mocha and watches for changes to re-run tests; does not generate coverage reports.|
 |`test:unit`|Runs unit tests with mocha and generates a coverage report.|
-|`build:prod`|Build app optimized for production|
-|`build:dev`|Build app optimized for debugging.|
+|`build:release`|Build app optimized for production|
+|`build:development`|Build app optimized for debugging.|
 |`lint`|Lint all `.js` files.|
 |`lint:fix`|Lint and fix all `.ts` files.|
 
