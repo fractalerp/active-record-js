@@ -1,14 +1,13 @@
-import { expect } from "chai";
+import { expect } from 'chai';
 import * as sinon from "sinon";
 import * as mongoose from "mongoose";
 import { NoSqlActiveRecord } from "../../nosql/nosql_active_record";
 import { userDocumentSchema, IUserDocument } from "../fixtures/user_document";
 import { userOneData, userTwoData } from "../fixtures/user_data";
-
 describe("NoSqlActiveRecord", () => {
   const sandbox = sinon.createSandbox();
-  let modelMock!: sinon.SinonStub<any[], any>;
-  const nosqlActiveRecord = new NoSqlActiveRecord<IUserDocument>("Document", userDocumentSchema);
+  let modelMock: sinon.SinonStub<any[], any> = sandbox.stub();
+  const nosqlActiveRecord: NoSqlActiveRecord<IUserDocument> = new NoSqlActiveRecord<IUserDocument>("Document", userDocumentSchema);
 
   before(() => {
     modelMock = sandbox.stub();

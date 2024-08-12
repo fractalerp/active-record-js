@@ -1,8 +1,7 @@
-import {
+import moongoose, {
   DefaultSchemaOptions, Model,
   ObtainDocumentType, ResolveSchemaOptions,
-  Schema, Types,
-  model
+  Schema, Types
 } from "mongoose";
 
 import { SchemaProperty } from "../lib/schema_property";
@@ -22,7 +21,7 @@ export class NoSqlActiveRecord<T> implements NoSQLActiveRecordInterface<T> {
     this.model =
       process.env.NODE_ENV !== "test"
         ? this.dbms.nosqlDB.database.model<T>(modelName, new Schema(mongoSchema as any))
-        : model<T>(modelName, new Schema(mongoSchema as any)) // allow for test
+        : moongoose.model<T>(modelName, new Schema(mongoSchema as any)) // allow for test
   }
 
   async find(query: any): Promise<T[]> {

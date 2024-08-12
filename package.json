@@ -24,6 +24,7 @@
     "node": "^16.8.0",
     "npm": "^7.21.0"
   },
+  "type": "commonjs",
   "main": "./dist/active_record.js",
   "types": "./dist/active_record.d.ts",
   "files": [
@@ -35,9 +36,9 @@
     "dev:app": "nodemon ./dist/main.js",
     "emit": "tsc",
     "pretest": "npm run lint && npm run build:test && tsc",
-    "test": "NODE_ENV='test' RDBMS_DATABASE_URI='mysql://' TS_NODE_COMPILER_OPTIONS='{\"module\":\"NodeNext\"}' mocha --config .mocharc.json",
-    "test:dev": "NODE_ENV='test' RDBMS_DATABASE_URI='mysql://' TS_NODE_COMPILER_OPTIONS='{\"module\":\"NodeNext\"}' mocha --config .mocharc.dev.json",
-    "test:unit": "NODE_ENV='test' RDBMS_DATABASE_URI='mysql://' TS_NODE_COMPILER_OPTIONS='{\"module\":\"NodeNext\"}' nyc -r lcov -e .ts -x \"*.spec.ts\" mocha --config .mocharc.json -r ts-node/register /**/*.spec.ts && nyc report",
+    "test": "NODE_ENV='test' RDBMS_DATABASE_URI='mysql://' mocha --config .mocharc.json",
+    "test:dev": "NODE_ENV='test' RDBMS_DATABASE_URI='mysql://' mocha --config .mocharc.dev.json",
+    "test:unit": "NODE_ENV='test' RDBMS_DATABASE_URI='mysql://' nyc -r lcov -e .ts -x \"*.spec.ts\" mocha --config .mocharc.json && nyc report",
     "upload_coverage": "nyc npm test && nyc report --reporter=text-lcov | coveralls",
     "lint": "",
     "lint:fix": "npm run lint -- --fix",
@@ -59,7 +60,7 @@
     "url": "https://github.com/fractalerp/active-record-js/issues"
   },
   "devDependencies": {
-    "@types/chai": "^4.3.12",
+    "@types/chai": "^4.3.17",
     "@types/classnames": "^2.3.1",
     "@types/core-js": "^2.5.8",
     "@types/dotenv": "^8.2.0",
@@ -70,7 +71,7 @@
     "@typescript-eslint/eslint-plugin-tslint": "^7.0.2",
     "@typescript-eslint/parser": "^7.2.0",
     "ajv": "^8.12.0",
-    "chai": "^5.1.1",
+    "chai": "^4.4.1",
     "check-dependencies": "^2.0.0",
     "copy-webpack-plugin": "^12.0.2",
     "core-js": "^3.36.0",
