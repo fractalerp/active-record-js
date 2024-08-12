@@ -1,20 +1,21 @@
-[![Build Status](https://github.com/fractalerp/active-record-js.svg?branch=master)](https://github.com/fractalerp/active-record-js)
-[![Code Climate](https://img.shields.io/codeclimate/maintainability/fractalerp/active-record-js.svg?style=flat-square)](https://codeclimate.com/github/fractalerp/active-record-js)
-[![Dependency Status](https://david-dm.org/fractalerp/active-record-js.svg)](https://david-dm.org/fractalerp/active-record-js)
-[![Dev Dependency Status](https://david-dm.org/fractalerp/active-record-js.svg#info=devDependencies)](https://david-dm.org/fractalerp/active-record-js#info=devDependencies)
-[![Known Vulnerabilities](https://snyk.io/test/github/fractalerp/active-record-js.svg)](https://snyk.io/test/github/fractalerp/active-record-js)
+[![Node.js CI](https://github.com/fractalerp/active-record-js/actions/workflows/ci.yml/badge.svg)](https://github.com/fractalerp/active-record-js/actions/workflows/ci.yml)
+[![Maintainability](https://api.codeclimate.com/v1/badges/486b143d9023a951f36d/maintainability)](https://codeclimate.com/github/fractalerp/active-record-js/maintainability)
+[![Dependencies](https://img.shields.io/librariesio/release/npm/@fractalerp/active-record-js)](https://libraries.io/npm/@fractalerp/active-record-js)
+[![Vulnerabilities](https://snyk.io/test/github/fractalerp/active-record-js/badge.svg)](https://snyk.io/test/github/fractalerp/active-record-js)
 ![Node 11](https://img.shields.io/badge/node-11.5.x-green.svg)
 ![Npm 6](https://img.shields.io/badge/npm-6.4.x-green.svg)
 ![Webpack 5](https://img.shields.io/badge/webpack-5.20.2-green.svg)
-[![codecov](https://codecov.io/gh/fractalerp/active-record-js/branch/master/graph/badge.svg)](https://codecov.io/gh/fractalerp/active-record-js)
-[![Coverage Status](https://coveralls.io/repos/github/fractalerp/active-record-js/badge.svg?branch=master)](https://coveralls.io/github/fractalerp/active-record-js?branch=master)
+[![codecov](https://codecov.io/gh/fractalerp/active-record-js/branch/main/graph/badge.svg)](https://codecov.io/gh/fractalerp/active-record-js)
+[![Coverage Status](https://coveralls.io/repos/github/fractalerp/active-record-js/badge.svg?branch=main)](https://coveralls.io/github/fractalerp/active-record-js?branch=main)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)](https://github.com/fractalerp/active-record-js/issues)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![code style: Tslint Latest](https://img.shields.io/badge/tslint_rules-latest-ff69b4.svg?style=flat-square)](https://github.com/buzinas/tslint-eslint-rules)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Ffractalerp%2Factive-record-js.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Ffractalerp%2Factive-record-js?ref=badge_shield)
-[![Apache License, Version 2.0](https://img.shields.io/badge/mit-blue.svg)](http://opensource.org/licenses/mit)
+[![MIT](https://img.shields.io/badge/mit-blue.svg)](http://opensource.org/licenses/mit)
 
 [![npm](https://nodei.co/npm/@fractalerp/active-record-js.png)](https://www.npmjs.com/package/@fractalerp/active-record-js)
+
+[![Download Status](https://img.shields.io/npm/dt/@fractalerp-active-record-js.svg)](https://www.npmjs.com/package/@fractalerp/active-record-js)
 
 # ACTIVE RECORD JS
 A library responsible for representing business data. 
