@@ -38,7 +38,7 @@
     "test": "NODE_ENV='test' RDBMS_DATABASE_URI='mysql://' TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' mocha --config .mocharc.json",
     "test:dev": "NODE_ENV='test' RDBMS_DATABASE_URI='mysql://' TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' mocha --config .mocharc.dev.json",
     "test:unit": "NODE_ENV='test' RDBMS_DATABASE_URI='mysql://' TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' nyc -r lcov -e .ts -x \"*.spec.ts\" mocha --config .mocharc.json -r ts-node/register && nyc report",
-    "coverage": "nyc report --reporter=text",
+    "coverage": "NODE_ENV='test' RDBMS_DATABASE_URI='mysql://' nyc --reporter cobertura mocha --config .mocharc.dev.json",
     "lint": "",
     "lint:fix": "npm run lint -- --fix",
     "build:development": "grunt development",
