@@ -1,6 +1,4 @@
 const path = require("path");
-const webpack = require("webpack");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
 const nodeExternals = require("webpack-node-externals");
 
 module.exports = {
@@ -27,19 +25,6 @@ module.exports = {
                 test: /\.tsx?$/,
                 loader: "ts-loader",
                 exclude: /node_modules/
-            },
-            {
-                test: /\.ejs$/,
-                loader: 'ejs-loader',
-                options: {
-                    variable: 'data',
-                    interpolate: '\\{\\{(.+?)\\}\\}',
-                    evaluate: '\\[\\[(.+?)\\]\\]'
-                }
-            },
-            {
-                test: /\.html$/,
-                loader: 'html-loader'
             }
         ]
     },
