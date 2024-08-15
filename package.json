@@ -113,7 +113,7 @@
   "dependencies": {
     "@faker-js/faker": "^8.4.1",
     "@types/app-root-path": "^1.2.8",
-    "@types/base64url": "^2.0.0",
+    "@types/base64url": "^2.0.3",
     "@types/bcryptjs": "^2.4.6",
     "@types/bluebird": "^3.5.42",
     "app-root-path": "^3.0.0",
