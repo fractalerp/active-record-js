@@ -1,6 +1,6 @@
 [![Node.js CI](https://github.com/fractalerp/active-record-js/actions/workflows/ci.yml/badge.svg)](https://github.com/fractalerp/active-record-js/actions/workflows/ci.yml)
 [![Maintainability](https://api.codeclimate.com/v1/badges/486b143d9023a951f36d/maintainability)](https://codeclimate.com/github/fractalerp/active-record-js/maintainability)
-[![Dependencies](https://img.shields.io/librariesio/release/npm/@fractalerp/active-record-js)](https://libraries.io/npm/@fractalerp/active-record-js)
+[![Dependencies](https://img.shields.io/librariesio/release/npm/@fractalerp/active-record-js)](https://libraries.io/npm/@fractalerp%2Factive-record-js)
 [![Vulnerabilities](https://snyk.io/test/github/fractalerp/active-record-js/badge.svg)](https://snyk.io/test/github/fractalerp/active-record-js)
 ![Node 11](https://img.shields.io/badge/node-11.5.x-green.svg)
 ![Npm 6](https://img.shields.io/badge/npm-6.4.x-green.svg)

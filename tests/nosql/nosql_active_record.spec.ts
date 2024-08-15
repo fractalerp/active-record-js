@@ -17,9 +17,7 @@ describe("NoSqlActiveRecord", () => {
     mongoose.Model.findByIdAndUpdate = modelMock;
     mongoose.Model.findByIdAndDelete = modelMock;
     mongoose.Model.aggregate = modelMock;
-    // @ts-ignore
     nosqlActiveRecord.model.prototype.save = modelMock;
-    // @ts-ignore
     nosqlActiveRecord.model.schema.index = modelMock;
   });
 

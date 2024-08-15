@@ -10,15 +10,10 @@ describe("RelationalActiveRecord", () => {
   const relationalActiveRecord = new RelationalActiveRecord<IUserTable>("Table", userTableSchema);
   before(() => {
     modelMock = sandbox.stub();
-    // @ts-ignore
     relationalActiveRecord.model.findOne = modelMock;
-    // @ts-ignore
     relationalActiveRecord.model.findAll = modelMock;
-    // @ts-ignore
     relationalActiveRecord.model.create = modelMock;
-    // @ts-ignore
     relationalActiveRecord.model.update = modelMock;
-    // @ts-ignore
     relationalActiveRecord.model.destroy = modelMock;
     // @ts-ignore
     relationalActiveRecord.model.sequelize?.query = modelMock;
