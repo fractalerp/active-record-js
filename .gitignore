@@ -17,5 +17,6 @@ assets/certs/*
 backend/public
 backend/logs/*
 boss/build/*
+.history/
 
 .env.dev
