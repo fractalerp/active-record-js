@@ -100,7 +100,7 @@
     "remap-istanbul": "^0.13.0",
     "sinon": "^18.0.0",
     "string-replace-loader": "^3.1.0",
-    "supertest": "^6.3.4",
+    "supertest": "^7.0.0",
     "ts-loader": "^9.5.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.2",
