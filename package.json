@@ -80,7 +80,7 @@
     "eslint-plugin-jsdoc": "^50.2.2",
     "eslint-plugin-prefer-arrow": "^1.2.3",
     "grunt": "^1.3.0",
-    "grunt-check-dependencies": "^0.12.0",
+    "grunt-check-dependencies": "^1.0.0",
     "grunt-contrib-clean": "^2.0.1",
     "grunt-contrib-compress": "^2.0.0",
     "grunt-contrib-copy": "^1.0.0",
